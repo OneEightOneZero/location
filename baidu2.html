@@ -1,0 +1,18 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=cj29UKyUNGVXY81C3ixGm0WXNGbEjYHv"></script>
+	<title>浏览器定位</title>
+</head>
+<body>
+</body>
+</html>
+<script type="text/javascript">
+	var geolocation = new BMap.Geolocation();
+	geolocation.getCurrentPosition(function(r){ 
+        // 如果获取定位信息成功的话，那定位信息将在这个回调函数里面返回
+        // console.log(r);
+        alert(JSON.stringify(r));
+	},{enableHighAccuracy: true})
+</script>
